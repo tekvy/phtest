@@ -15,6 +15,10 @@ def hello_world():
     return 'Hello World!'
 
 
+@app.route('/apple-app-site-association')
+def return_apple_cert():
+    return get_json_data("apple-app-site-association")
+
 
 def get_json_data(file_name):
     json_url = os.path.join(SITE_ROOT, "static/", file_name)
