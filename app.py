@@ -23,6 +23,15 @@ def return_apple_cert2():
 def return_apple_cert():
     return get_cert_data("apple-app-site-association")
 
+@app.route('/psc/<id>')
+def return_psc_info(id):
+    psc_data = "PSC ID = " + id + "\n" + "\nPSC INFO - 11:00 AM to 01:00 PM"
+    return psc_data
+
+@app.route('/homedraw/<id>')
+def return_homedraw_info(id):
+    hd_data = "Homedraw ID = " + id + "\n" + "\Homedraw INFO Not Available"
+    return hd_data
 
 def get_cert_data(file_name):
     json_url = os.path.join(SITE_ROOT, "static/", file_name)
