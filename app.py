@@ -17,12 +17,17 @@ def hello_world():
 
 @app.route('/.well-known/apple-app-site-association')
 def return_apple_cert2():
-    return get_json_data("apple-app-site-association")
+    return get_cert_data("apple-app-site-association")
 
 @app.route('/apple-app-site-association')
 def return_apple_cert():
-    return get_json_data("apple-app-site-association")
+    return get_cert_data("apple-app-site-association")
 
+
+def get_cert_data(file_name):
+    json_url = os.path.join(SITE_ROOT, "static/", file_name)
+    data = open(json_url)
+    return Response(data, mimetype='application/pkcs7-mime')
 
 def get_json_data(file_name):
     json_url = os.path.join(SITE_ROOT, "static/", file_name)
