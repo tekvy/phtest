@@ -14,6 +14,9 @@ SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 def hello_world():
     return 'Hello World!'
 
+@app.route('/.well-known/apple-app-site-association')
+def return_apple_cert2():
+    return get_json_data("apple-app-site-association")
 
 @app.route('/apple-app-site-association')
 def return_apple_cert():
