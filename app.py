@@ -19,6 +19,12 @@ def hello_world():
 def return_apple_cert2():
     return get_cert_data("apple-app-site-association")
 
+
+@app.route('/.well-known/assetlinks.json')
+def return_json_android():
+    return get_cert_data("assetlinks.json")
+
+
 @app.route('/apple-app-site-association')
 def return_apple_cert():
     return get_cert_data("apple-app-site-association")

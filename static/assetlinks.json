@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.mphrx.phlooba.patient.debug",
+    "sha256_cert_fingerprints":
+    ["52:43:DB:3C:83:36:6F:3E:08:DE:92:46:6C:08:6D:A8:4F:88:E2:79:18:C3:56:B9:1D:71:7F:5D:A7:ED:3B:39"]
+  }
+}]
